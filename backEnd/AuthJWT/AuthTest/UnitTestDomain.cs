@@ -1,10 +1,10 @@
 namespace AuthTest;
 
 [TestClass]
-public class UnitTest1
+public class UnitTestDomain
 {
     [TestMethod]
-    public void TestMethod1()
+    public void createModelPersona()
     {
     }
 }
