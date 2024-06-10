@@ -1,3 +1,4 @@
+using System.Text.Json.Serialization;
 using System.Text.RegularExpressions;
 using Auth.Domain.Exceptions;
 
@@ -9,6 +10,7 @@ public class UsuarioModel : PersonaModel
     public string Email { get; private set; }
     public string Password { get; private set; }
     
+    [JsonConstructor]
     public UsuarioModel(
         Guid id, 
         string nombre, 
@@ -48,6 +50,5 @@ public class UsuarioModel : PersonaModel
         if (new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$").Match(email).Success) return email;
         throw new InvalidEmailException();
     }
-    
     
 }

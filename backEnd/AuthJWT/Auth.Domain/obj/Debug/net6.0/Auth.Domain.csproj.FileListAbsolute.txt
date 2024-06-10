@@ -1,0 +1,12 @@
+D:\Proyectos\5-Auth.Net\Auth.Net\backEnd\AuthJWT\Auth.Domain\bin\Debug\net6.0\Auth.Domain.deps.json
+D:\Proyectos\5-Auth.Net\Auth.Net\backEnd\AuthJWT\Auth.Domain\bin\Debug\net6.0\Auth.Domain.dll
+D:\Proyectos\5-Auth.Net\Auth.Net\backEnd\AuthJWT\Auth.Domain\bin\Debug\net6.0\Auth.Domain.pdb
+D:\Proyectos\5-Auth.Net\Auth.Net\backEnd\AuthJWT\Auth.Domain\obj\Debug\net6.0\Auth.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Proyectos\5-Auth.Net\Auth.Net\backEnd\AuthJWT\Auth.Domain\obj\Debug\net6.0\Auth.Domain.AssemblyInfoInputs.cache
+D:\Proyectos\5-Auth.Net\Auth.Net\backEnd\AuthJWT\Auth.Domain\obj\Debug\net6.0\Auth.Domain.AssemblyInfo.cs
+D:\Proyectos\5-Auth.Net\Auth.Net\backEnd\AuthJWT\Auth.Domain\obj\Debug\net6.0\Auth.Domain.csproj.CoreCompileInputs.cache
+D:\Proyectos\5-Auth.Net\Auth.Net\backEnd\AuthJWT\Auth.Domain\obj\Debug\net6.0\Auth.Domain.sourcelink.json
+D:\Proyectos\5-Auth.Net\Auth.Net\backEnd\AuthJWT\Auth.Domain\obj\Debug\net6.0\Auth.Domain.dll
+D:\Proyectos\5-Auth.Net\Auth.Net\backEnd\AuthJWT\Auth.Domain\obj\Debug\net6.0\refint\Auth.Domain.dll
+D:\Proyectos\5-Auth.Net\Auth.Net\backEnd\AuthJWT\Auth.Domain\obj\Debug\net6.0\Auth.Domain.pdb
+D:\Proyectos\5-Auth.Net\Auth.Net\backEnd\AuthJWT\Auth.Domain\obj\Debug\net6.0\ref\Auth.Domain.dll

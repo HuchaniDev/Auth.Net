@@ -11,8 +11,11 @@ builder.Services.RegisterRepositories(builder.Configuration);
 var app = builder.Build();
 
 // Configure the HTTP request pipeline. || endpoint API
-app.Map("Persona/Get",(PersonaService personaService)=>personaService.Getall());
-app.Map("Persona/Create", (PersonaModel model, PersonaService personaService) => personaService.Create(model));
+app.MapGet("Persona/Get",(PersonaService personaService)=>personaService.Getall());
+app.MapPost("Persona/Create", (PersonaModel model, PersonaService personaService) => personaService.Create(model));
+
+app.MapPost("Usuario/Create", (UsuarioModel model, PersonaService personaService) => personaService.CreateUsuario(model));
+app.MapGet("Usuario/Get",(PersonaService personaService)=>personaService.GetUsuarios());
 
 
 app.Run();
