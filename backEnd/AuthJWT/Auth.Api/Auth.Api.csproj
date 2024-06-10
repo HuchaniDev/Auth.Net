@@ -4,7 +4,11 @@
         <TargetFramework>net6.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
-        <RootNamespace>WebApplication1</RootNamespace>
+        <RootNamespace>Auth.Api</RootNamespace>
     </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Auth.Infrastructure\Auth.Infrastructure.csproj" />
+    </ItemGroup>
 
 </Project>

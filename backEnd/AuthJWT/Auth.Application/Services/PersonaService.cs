@@ -31,4 +31,9 @@ public class PersonaService
 
         return await _personaRepository.CreateUsuarioAsync(model);
     }
+    
+    public async Task<UsuarioModel[]> GetUsuarios()
+    {
+        return await _personaRepository.GetUsuariosAsync();
+    }
 }

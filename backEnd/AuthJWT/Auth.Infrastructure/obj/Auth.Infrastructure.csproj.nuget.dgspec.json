@@ -4,14 +4,78 @@
     "D:\\Proyectos\\5-Auth.Net\\Auth.Net\\backEnd\\AuthJWT\\Auth.Infrastructure\\Auth.Infrastructure.csproj": {}
   },
   "projects": {
-    "D:\\Proyectos\\5-Auth.Net\\Auth.Net\\backEnd\\AuthJWT\\Auth.Infrastructure\\Auth.Infrastructure.csproj": {
+    "D:\\Proyectos\\5-Auth.Net\\Auth.Net\\backEnd\\AuthJWT\\Auth.Application\\Auth.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Proyectos\\5-Auth.Net\\Auth.Net\\backEnd\\AuthJWT\\Auth.Infrastructure\\Auth.Infrastructure.csproj",
-        "projectName": "Auth.Infrastructure",
-        "projectPath": "D:\\Proyectos\\5-Auth.Net\\Auth.Net\\backEnd\\AuthJWT\\Auth.Infrastructure\\Auth.Infrastructure.csproj",
+        "projectUniqueName": "D:\\Proyectos\\5-Auth.Net\\Auth.Net\\backEnd\\AuthJWT\\Auth.Application\\Auth.Application.csproj",
+        "projectName": "Auth.Application",
+        "projectPath": "D:\\Proyectos\\5-Auth.Net\\Auth.Net\\backEnd\\AuthJWT\\Auth.Application\\Auth.Application.csproj",
         "packagesPath": "C:\\Users\\ASUSTG\\.nuget\\packages\\",
-        "outputPath": "D:\\Proyectos\\5-Auth.Net\\Auth.Net\\backEnd\\AuthJWT\\Auth.Infrastructure\\obj\\",
+        "outputPath": "D:\\Proyectos\\5-Auth.Net\\Auth.Net\\backEnd\\AuthJWT\\Auth.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ASUSTG\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Proyectos\\5-Auth.Net\\Auth.Net\\backEnd\\AuthJWT\\Auth.Domain\\Auth.Domain.csproj": {
+                "projectPath": "D:\\Proyectos\\5-Auth.Net\\Auth.Net\\backEnd\\AuthJWT\\Auth.Domain\\Auth.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Proyectos\\5-Auth.Net\\Auth.Net\\backEnd\\AuthJWT\\Auth.Domain\\Auth.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Proyectos\\5-Auth.Net\\Auth.Net\\backEnd\\AuthJWT\\Auth.Domain\\Auth.Domain.csproj",
+        "projectName": "Auth.Domain",
+        "projectPath": "D:\\Proyectos\\5-Auth.Net\\Auth.Net\\backEnd\\AuthJWT\\Auth.Domain\\Auth.Domain.csproj",
+        "packagesPath": "C:\\Users\\ASUSTG\\.nuget\\packages\\",
+        "outputPath": "D:\\Proyectos\\5-Auth.Net\\Auth.Net\\backEnd\\AuthJWT\\Auth.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -44,6 +108,87 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Proyectos\\5-Auth.Net\\Auth.Net\\backEnd\\AuthJWT\\Auth.Infrastructure\\Auth.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Proyectos\\5-Auth.Net\\Auth.Net\\backEnd\\AuthJWT\\Auth.Infrastructure\\Auth.Infrastructure.csproj",
+        "projectName": "Auth.Infrastructure",
+        "projectPath": "D:\\Proyectos\\5-Auth.Net\\Auth.Net\\backEnd\\AuthJWT\\Auth.Infrastructure\\Auth.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\ASUSTG\\.nuget\\packages\\",
+        "outputPath": "D:\\Proyectos\\5-Auth.Net\\Auth.Net\\backEnd\\AuthJWT\\Auth.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ASUSTG\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Proyectos\\5-Auth.Net\\Auth.Net\\backEnd\\AuthJWT\\Auth.Application\\Auth.Application.csproj": {
+                "projectPath": "D:\\Proyectos\\5-Auth.Net\\Auth.Net\\backEnd\\AuthJWT\\Auth.Application\\Auth.Application.csproj"
+              },
+              "D:\\Proyectos\\5-Auth.Net\\Auth.Net\\backEnd\\AuthJWT\\Auth.Domain\\Auth.Domain.csproj": {
+                "projectPath": "D:\\Proyectos\\5-Auth.Net\\Auth.Net\\backEnd\\AuthJWT\\Auth.Domain\\Auth.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.31, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.31, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

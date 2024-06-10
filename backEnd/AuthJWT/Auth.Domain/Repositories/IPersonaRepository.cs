@@ -18,4 +18,6 @@ public interface IPersonaRepository:IRepository
     Task<UsuarioModel> CreateUsuarioAsync(UsuarioModel model);
     
     Task<bool> IsDuplicateUserName(string username);
+
+    Task<UsuarioModel[]> GetUsuariosAsync();
 }
