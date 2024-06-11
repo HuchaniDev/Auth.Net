@@ -16,7 +16,7 @@ public class PersonaRepository:IPersonaRepository
     public Task<PersonaModel> CreatePersonaAsync(PersonaModel model)
     {
         var result = _authDbContext.Persona.Add(model.ToEntity());
-        _authDbContext.SaveChangesAsync();
+        _authDbContext.SaveChanges();
         return Task.FromResult(result.Entity.ToModel());
     }
 
@@ -39,7 +39,7 @@ public class PersonaRepository:IPersonaRepository
     public Task<UsuarioModel> CreateUsuarioAsync(UsuarioModel model)
     {
         var result = _authDbContext.Usuario.Add(model.ToEntity());
-        _authDbContext.SaveChanges();
+        _authDbContext.SaveChangesAsync();
         return Task.FromResult(result.Entity.ToModel(model));
     }
 
