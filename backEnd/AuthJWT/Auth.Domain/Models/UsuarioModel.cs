@@ -41,9 +41,11 @@ public class UsuarioModel : PersonaModel
     
     private static string ValidatePassword(string password)
     {
-        if (new Regex(@"^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{4,}$").Match(password).Success) return password;
+        if (new Regex(@"^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@#$/+%^=&*-]{4,}$").Match(password).Success) return password;
         throw new InvalidPasswordException();
     }
+
+    public void setPasswordHash(string passwordHash) => Password = passwordHash;
     
     private static string ValidateEmail(string email)
     {
