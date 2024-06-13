@@ -8,6 +8,7 @@ public class PasswordEncriptProvider:IPaswordEncriptProvider
 {
     private readonly PasswordHasher<string> passwordHasher = new PasswordHasher<string>();
 
+    
 //    public Task<string> PaswordEncript(string password, PersonaModel persona)
     public Task<string> PaswordEncript(string password)
     {

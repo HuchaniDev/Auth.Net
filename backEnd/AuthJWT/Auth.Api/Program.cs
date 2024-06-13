@@ -18,6 +18,6 @@ app.MapPost("Persona/Create", (PersonaModel model, PersonaService personaService
 app.MapGet("Usuario/Get",(UsuarioService usuarioService)=>usuarioService.GetUsuarios());
 app.MapPost("Usuario/Create", (UsuarioModel model, UsuarioService usuarioService) => usuarioService.CreateUsuario(model));
 
-app.MapPost("Login/Autenticate",(AuthService authService, LoginModel login) => authService.Login(login));
+app.MapPost("Login/Autenticate",(LoginModel login, AuthService authService) => authService.Login(login));
 
 app.Run();

@@ -36,9 +36,9 @@ public class UsuarioRepository:IUsuarioRepository
         
         foreach (var persona in Personas)
         {
-            var user = _authDbContext.Usuario.Where(p => p.Persona_id == persona.Id).FirstOrDefault().ToModel(persona);
-            usuarios.Add(user);
-
+            var user = _authDbContext.Usuario.Where(p => p.Persona_id == persona.Id).FirstOrDefault();
+            if(user != null) usuarios.Add(user.ToModel(persona));
+            
         }
 
         return Task.FromResult(usuarios.ToArray());
@@ -52,7 +52,13 @@ public class UsuarioRepository:IUsuarioRepository
     public Task<UsuarioModel> GetByUsername(string username)
     {
         var user = _authDbContext.Usuario.Where(p => p.Username == username).FirstOrDefault();
-        var persona = _authDbContext.Persona.Where(P => P.Id == user.Persona_id).FirstOrDefault();
-        return Task.FromResult<UsuarioModel>(user.ToModel(persona.ToModel()));
+
+        if (user != null)
+        {
+            var persona = _authDbContext.Persona.Where(P => P.Id == user.Persona_id).FirstOrDefault();
+            return Task.FromResult<UsuarioModel>(user.ToModel(persona.ToModel()));
+        }
+
+        return Task.FromResult<UsuarioModel>(null);
     }
 }

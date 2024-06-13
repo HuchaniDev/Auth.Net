@@ -26,6 +26,7 @@ public class AuthService
     {
         var usuario = await _UsuarioRepository.GetByUsername(model.UserName);
         if (usuario == null) throw new UserNoExistException();
+        
         var IspasswordCorrect = _paswordEncriptProvider.VerifyPassword(usuario.Password, model.Clave);
 
         if (IspasswordCorrect.Result)

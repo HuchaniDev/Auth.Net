@@ -8,10 +8,10 @@ public class LoginModel
     public string Clave { get; set; }
 
     [JsonConstructor]
-    public LoginModel( string username,string password)
+    public LoginModel( string username,string clave)
     {
         UserName = username;
-        Clave= password;
+        Clave= clave;
     }
     
 }
