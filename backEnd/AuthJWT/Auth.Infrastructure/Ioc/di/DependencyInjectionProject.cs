@@ -1,6 +1,5 @@
 using Auth.Application.Providers;
 using Auth.Application.Services;
-using Auth.Domain.Adapters;
 using Auth.Domain.Repositories;
 using Auth.Infrastructure.Database.EntityFramework;
 using Auth.Infrastructure.Database.EntityFramework.Repositories;
@@ -16,14 +15,17 @@ public static class DependencyInjectionProject
     public static IServiceCollection RegisterProviders(this IServiceCollection collection)
     {
         collection.AddTransient<IPaswordEncriptProvider, PasswordEncriptProvider>();
-        collection.AddTransient<IPasswordEncriptAdapter, PasswordEncriptAdapter>();
 
         return collection;
     }
     
     public static IServiceCollection RegisterServices(this IServiceCollection collection)
     {
+
         collection.AddTransient<PersonaService>();
+        collection.AddTransient<AuthService>();
+        collection.AddTransient<UsuarioService>();
+
         return collection;
     }
     
@@ -36,6 +38,7 @@ public static class DependencyInjectionProject
         });
 
         collection.AddTransient<IPersonaRepository, PersonaRepository>();
+        collection.AddTransient<IUsuarioRepository, UsuarioRepository>();
 
         return collection;
     }

@@ -1,4 +1,5 @@
 using Auth.Domain.Models;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace Auth.Infrastructure.Database.EntityFramework.Entities;
 
@@ -10,7 +11,7 @@ public class UsuarioEntity
     public string Password_hash { get; set; }
     public Guid Persona_id { get; set; }
 
-    public UsuarioModel ToModel(PersonaModel persona)
+    public UsuarioModel ToModel( PersonaModel persona)
     {
         return new UsuarioModel(
             persona,

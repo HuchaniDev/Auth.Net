@@ -12,7 +12,7 @@ public static class UsuarioModelExtencion
             Username = model.Username,
             Email = model.Email,
             Password_hash = model.Password,
-            Persona_id = model.Id
+            Persona_id = model.Persona.Id
         };
     }
 }

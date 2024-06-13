@@ -13,11 +13,4 @@ public interface IPersonaRepository:IRepository
 
     Task Delete(PersonaModel model);
     
-    
-    //Para usuarios
-    Task<UsuarioModel> CreateUsuarioAsync(UsuarioModel model);
-    
-    Task<bool> IsDuplicateUserName(string username);
-
-    Task<UsuarioModel[]> GetUsuariosAsync();
 }

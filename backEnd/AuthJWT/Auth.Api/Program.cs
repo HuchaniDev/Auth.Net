@@ -15,8 +15,9 @@ var app = builder.Build();
 app.MapGet("Persona/Get",(PersonaService personaService)=>personaService.Getall());
 app.MapPost("Persona/Create", (PersonaModel model, PersonaService personaService) => personaService.Create(model));
 
-app.MapPost("Usuario/Create", (UsuarioModel model, PersonaService personaService) => personaService.CreateUsuario(model));
-app.MapGet("Usuario/Get",(PersonaService personaService)=>personaService.GetUsuarios());
+app.MapGet("Usuario/Get",(UsuarioService usuarioService)=>usuarioService.GetUsuarios());
+app.MapPost("Usuario/Create", (UsuarioModel model, UsuarioService usuarioService) => usuarioService.CreateUsuario(model));
 
+app.MapPost("Login/Autenticate",(AuthService authService, LoginModel login) => authService.Login(login));
 
 app.Run();
