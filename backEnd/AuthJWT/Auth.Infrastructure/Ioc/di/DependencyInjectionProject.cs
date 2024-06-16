@@ -15,6 +15,7 @@ public static class DependencyInjectionProject
     public static IServiceCollection RegisterProviders(this IServiceCollection collection)
     {
         collection.AddTransient<IPaswordEncriptProvider, PasswordEncriptProvider>();
+        collection.AddTransient<IJwTokenProvider, JwTokenProvider>();
 
         return collection;
     }

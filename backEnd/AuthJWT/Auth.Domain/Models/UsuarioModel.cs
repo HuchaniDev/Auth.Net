@@ -9,9 +9,9 @@ public class UsuarioModel
     public string Username { get; private set; }
     public string Email { get; private set; }
     public string Password { get; private set; }
-
     public PersonaModel Persona { get; set; }
-    
+
+
     [JsonConstructor]
     /*public UsuarioModel(
         Guid id, 
@@ -22,7 +22,7 @@ public class UsuarioModel
         string username,
         string email,
         string password
-        )
+        ) : base(id, nombre, apellido, telefono, ci)
     {
         Username = username;
         Email = ValidateEmail(email);
@@ -39,7 +39,7 @@ public class UsuarioModel
         Username = username;
         Email = ValidateEmail(email);
         Password = ValidatePassword(password);
-        Persona = persona;
+        Persona= persona;
     }
     
     private static string ValidatePassword(string password)

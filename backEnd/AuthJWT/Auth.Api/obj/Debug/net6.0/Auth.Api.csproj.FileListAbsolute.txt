@@ -66,3 +66,5 @@ D:\Proyectos\5-Auth.Net\Auth.Net\backEnd\AuthJWT\Auth.Api\obj\Debug\net6.0\refin
 D:\Proyectos\5-Auth.Net\Auth.Net\backEnd\AuthJWT\Auth.Api\obj\Debug\net6.0\Auth.Api.pdb
 D:\Proyectos\5-Auth.Net\Auth.Net\backEnd\AuthJWT\Auth.Api\obj\Debug\net6.0\Auth.Api.genruntimeconfig.cache
 D:\Proyectos\5-Auth.Net\Auth.Net\backEnd\AuthJWT\Auth.Api\obj\Debug\net6.0\ref\Auth.Api.dll
+D:\Proyectos\5-Auth.Net\Auth.Net\backEnd\AuthJWT\Auth.Api\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Proyectos\5-Auth.Net\Auth.Net\backEnd\AuthJWT\Auth.Api\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll

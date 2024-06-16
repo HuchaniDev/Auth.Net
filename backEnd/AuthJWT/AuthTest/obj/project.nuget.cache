@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "6oVg3X1SDpnw/yuOJ5mwjktPpakReDxlVgG7M3MVSN7gvHTvE53UwpE5O+iD7rzZaJFcedeLGSsUZx2beqm8Xg==",
+  "dgSpecHash": "j3ms8j1AV352Gq1YBKSpk00NnkwAfPy5yBXP3ZyIB9fwf8rqQ7zNkST0p+a52dwsUBluKH+4ECAXvqWTwa08nA==",
   "success": true,
   "projectFilePath": "D:\\Proyectos\\5-Auth.Net\\Auth.Net\\backEnd\\AuthJWT\\AuthTest\\AuthTest.csproj",
   "expectedPackageFiles": [
