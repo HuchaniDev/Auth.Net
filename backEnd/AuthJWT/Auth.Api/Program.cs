@@ -1,6 +1,7 @@
 using System.Text;
 using Auth.Application.Services;
 using Auth.Domain.Models;
+using Auth.Domain.Models.ContenidoIASD;
 using Auth.Infrastructure.Ioc.di;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -56,5 +57,11 @@ app.MapGet("Usuario/Get",[Authorize](UsuarioService usuarioService)=>usuarioServ
 app.MapPost("Usuario/Create",[Authorize] (UsuarioModel model, UsuarioService usuarioService) => usuarioService.CreateUsuario(model));
 
 app.MapPost("Login/Autenticate", (LoginModel login, AuthService authService) => authService.Login(login));
+
+//contenido
+app.MapPost("Contenido/CreateGrade",
+    (GradeModel grade, ContenidoService contenidoService) => contenidoService.createGrade(grade));
+
+app.MapGet("Contenido/GradeGetAll",(ContenidoService contenidoService)=> contenidoService.getGrade());
 
 app.Run();

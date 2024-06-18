@@ -16,6 +16,7 @@ public class UsuarioRepository:IUsuarioRepository
     
     public Task<UsuarioModel> CreateUsuarioAsync(UsuarioModel model)
     {
+        _authDbContext.Persona.Add(model.Persona.ToEntity());
         var result = _authDbContext.Usuario.Add(model.ToEntity());
         _authDbContext.SaveChanges();
         

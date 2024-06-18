@@ -26,6 +26,7 @@ public static class DependencyInjectionProject
         collection.AddTransient<PersonaService>();
         collection.AddTransient<AuthService>();
         collection.AddTransient<UsuarioService>();
+        collection.AddTransient<ContenidoService>();
 
         return collection;
     }
@@ -40,6 +41,7 @@ public static class DependencyInjectionProject
 
         collection.AddTransient<IPersonaRepository, PersonaRepository>();
         collection.AddTransient<IUsuarioRepository, UsuarioRepository>();
+        collection.AddTransient<IContenidoRepository, ContenidoRepository>();
 
         return collection;
     }
