@@ -23,4 +23,8 @@ public class ContenidoService
     }
     
     // crear contenido
+    public async Task<ContentModel> createContent(ContentModel content)
+    {
+        return await _contenidoRepository.CreateContentAsync(content);
+    }
 }

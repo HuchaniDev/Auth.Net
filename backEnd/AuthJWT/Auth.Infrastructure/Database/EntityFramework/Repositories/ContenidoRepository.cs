@@ -29,7 +29,9 @@ public class ContenidoRepository : IContenidoRepository
 
     public Task<ContentModel> CreateContentAsync(ContentModel model)
     {
-        throw new NotImplementedException();
+        var result = _authDbContext.Content.Add(model.ToEntity());
+        _authDbContext.SaveChanges();
+        return Task.FromResult<ContentModel>(result.Entity.ToModel());
     }
 
     public Task<ContentModel[]> GetContentAsync(int id)

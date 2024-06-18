@@ -54,14 +54,16 @@ app.MapGet("Persona/Get",[Authorize](PersonaService personaService)=>personaServ
 app.MapPost("Persona/Create", [Authorize](PersonaModel model, PersonaService personaService) => personaService.Create(model));
 
 app.MapGet("Usuario/Get",[Authorize](UsuarioService usuarioService)=>usuarioService.GetUsuarios());
-app.MapPost("Usuario/Create",[Authorize] (UsuarioModel model, UsuarioService usuarioService) => usuarioService.CreateUsuario(model));
+app.MapPost("Usuario/Create", (UsuarioModel model, UsuarioService usuarioService) => usuarioService.CreateUsuario(model));
 
 app.MapPost("Login/Autenticate", (LoginModel login, AuthService authService) => authService.Login(login));
 
 //contenido
 app.MapPost("Contenido/CreateGrade",
     (GradeModel grade, ContenidoService contenidoService) => contenidoService.createGrade(grade));
-
 app.MapGet("Contenido/GradeGetAll",(ContenidoService contenidoService)=> contenidoService.getGrade());
+
+app.MapPost("Contenido/create",
+    (ContentModel content, ContenidoService contenidoService) => contenidoService.createContent(content));
 
 app.Run();

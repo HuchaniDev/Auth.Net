@@ -12,14 +12,10 @@ public class ContentModel
     public ICollection<GradeModel> Grades { get; set; }
 
     [JsonConstructor]
-    public ContentModel(
-        string name,
-        int type,
-        string description
-        )
+    public ContentModel(string name, int  contentType, string description)
     {
         Name = name;
-        ContentType = type;
+        ContentType = contentType;
         Description = description;
     }
     

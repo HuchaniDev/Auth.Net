@@ -9,7 +9,7 @@ public class ContentEntity
     public int contentType { get; set; }
     public string description { get; set; }
 
-    ContentModel ToModel()
+    public ContentModel ToModel()
     {
         return new ContentModel(id, name, contentType, description);
     }
