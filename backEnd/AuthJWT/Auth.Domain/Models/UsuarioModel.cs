@@ -6,6 +6,7 @@ namespace Auth.Domain.Models;
 
 public class UsuarioModel
 {
+    public Guid Id { get; set; }
     public string Username { get; private set; }
     public string Email { get; private set; }
     public string Password { get; private set; }
@@ -36,6 +37,21 @@ public class UsuarioModel
         string password
     ) 
     {
+        Username = username;
+        Email = ValidateEmail(email);
+        Password = ValidatePassword(password);
+        Persona= persona;
+    }
+    
+    public UsuarioModel(
+        PersonaModel persona,
+        Guid id,
+        string username,
+        string email,
+        string password
+    )
+    {
+        Id = id;
         Username = username;
         Email = ValidateEmail(email);
         Password = ValidatePassword(password);

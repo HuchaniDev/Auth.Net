@@ -8,8 +8,7 @@ public class ContentModel
     public string Name { get; private set; }
     public int ContentType { get; private set; }
     public string Description { get; private set; }
-    
-    public ICollection<GradeModel> Grades { get; set; }
+
 
     [JsonConstructor]
     public ContentModel(string name, int  contentType, string description)

@@ -15,6 +15,7 @@ public class UsuarioEntity
     {
         return new UsuarioModel(
             persona,
+            Id,
             Username,
             Email,
             Password_hash

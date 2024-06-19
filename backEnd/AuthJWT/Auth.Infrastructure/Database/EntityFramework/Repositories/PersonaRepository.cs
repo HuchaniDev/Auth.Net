@@ -22,8 +22,8 @@ public class PersonaRepository:IPersonaRepository
 
     public Task<PersonaModel[]> GetAllAsync()
     {
-        var Personas = _authDbContext.Persona.Select(entity => entity.ToModel()).ToArray();
-        return Task.FromResult(Personas);
+        var personas = _authDbContext.Persona.Select(entity => entity.ToModel()).ToArray();
+        return Task.FromResult(personas);
     }
 
     public Task<PersonaModel> UpdateAsync(PersonaModel model)

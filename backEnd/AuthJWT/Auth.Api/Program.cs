@@ -1,4 +1,6 @@
 using System.Text;
+using Auth.Application.Exceptions;
+
 using Auth.Application.Services;
 using Auth.Domain.Models;
 using Auth.Domain.Models.ContenidoIASD;
@@ -61,9 +63,53 @@ app.MapPost("Login/Autenticate", (LoginModel login, AuthService authService) => 
 //contenido
 app.MapPost("Contenido/CreateGrade",
     (GradeModel grade, ContenidoService contenidoService) => contenidoService.createGrade(grade));
-app.MapGet("Contenido/GradeGetAll",(ContenidoService contenidoService)=> contenidoService.getGrade());
+app.MapGet("Contenido/GradeGetAll",[Authorize](ContenidoService contenidoService)=> contenidoService.getGrade());
 
-app.MapPost("Contenido/create",
-    (ContentModel content, ContenidoService contenidoService) => contenidoService.createContent(content));
+app.MapPost("Contenido/create",(ContentModel content, ContenidoService contenidoService) => contenidoService.createContent(content));
+app.MapGet("Contenido/Get",[Authorize](ContenidoService contenidoService)=> contenidoService.getContent());
+
+app.MapGet("GradeContenido/get/{id}",[Authorize](int id, ContenidoService contenidoService) => contenidoService.getGradeContent(id));
+
+app.MapGet("Contenido/byId/{id}", (int id, ContenidoService contenidoService) =>contenidoService.ContentGetById(id));
+
+//favorites
+app.MapPost("SaveFavorite/{id}", [Authorize] async (int id, HttpContext httpContext, ContenidoService contenidoService) =>
+{
+    var userIdClaim = httpContext.User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier);
+    if (userIdClaim == null)
+    {
+        return Results.Unauthorized();
+    }
+
+    string userId = userIdClaim.Value;
+    try
+    {
+        var result = await contenidoService.saveFavorite(userId, id);
+        return Results.Ok(result);
+    }
+    catch (Exception e)
+    {
+        return Results.Problem("error");
+    }
+});
+
+app.MapGet("Favorites/get", [Authorize] async ( HttpContext httpContext, ContenidoService contenidoService) =>
+{
+    var userIdClaim = httpContext.User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier);
+    if (userIdClaim == null)
+    {
+        return Results.Unauthorized();
+    }
+    Guid userId = Guid.Parse(userIdClaim.Value);
+    try
+    {
+        var result = await contenidoService.getFavorites(userId);
+        return Results.Ok(result);
+    }
+    catch (Exception e)
+    {
+        return Results.Problem("error");
+    }
+});
 
 app.Run();

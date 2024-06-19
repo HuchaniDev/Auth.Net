@@ -15,10 +15,11 @@ public class JwTokenProvider:IJwTokenProvider
     {
         _secretKey = secretKey;
     }
-    public Task<string> GenerateToken(string name, string username )
+    public Task<string> GenerateToken(Guid userId,string name, string username )
     {
         var claims = new[]
         {
+            new Claim(JwtRegisteredClaimNames.NameId,userId.ToString()),
             new Claim(JwtRegisteredClaimNames.Name, name),
             new Claim(JwtRegisteredClaimNames.Sub, username),
             new Claim("permission", "escritura"),

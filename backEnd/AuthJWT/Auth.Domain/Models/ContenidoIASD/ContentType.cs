@@ -2,10 +2,10 @@ namespace Auth.Domain.Models.ContenidoIASD;
 
 public enum ContentType
 {
-    Audio = 1,
-    Video = 2,
-    Imagen = 3,
-    Url = 4,
-    Pdf = 5
+    Audio = 0,
+    Video = 1,
+    Imagen = 2,
+    Url = 3,
+    Pdf = 4
 }
 

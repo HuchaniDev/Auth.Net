@@ -33,7 +33,7 @@ public class AuthService
 
         if (IspasswordCorrect.Result)
         {
-            var token = await _jwTokenProvider.GenerateToken(usuario.Persona.Nombre, usuario.Username);
+            var token = await _jwTokenProvider.GenerateToken(usuario.Id,usuario.Persona.Nombre, usuario.Username);
             return await Task.FromResult(new LoginResponse(usuario.Persona.Nombre, usuario.Username, token));
         }
 

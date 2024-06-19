@@ -13,4 +13,9 @@ public class ContentEntity
     {
         return new ContentModel(id, name, contentType, description);
     }
+
+    public GradeContentModel ToGradeContent()
+    {
+        return new GradeContentModel(id, name);
+    }
 }
